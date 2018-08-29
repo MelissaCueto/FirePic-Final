@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>FirePic</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Usuario</ion-label>
+    <ion-input aria-placeholder="ejemplo@ejemplo.com" type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+
+  <button ion-button full (tap)="login(user)">Entrar</button>
+  
+  <button ion-button full color="light" (tap)="register()">Registrate</button>
+</ion-content>

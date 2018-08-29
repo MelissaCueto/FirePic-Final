@@ -1,0 +1,7 @@
+{
+  "name": "FirePicc",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

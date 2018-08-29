@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Agregar</ion-title>
+    <button ion-button clear item-end (tap)="close()">Cerrar</button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+      <ion-item>
+          <ion-label fixed>Imagen</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+        
+    <ion-item>
+      <ion-label fixed>Nombre</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label fixed>Sabor</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Precio</ion-label>
+            <ion-input type="number" value=""></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="imagePreview">
+            <img [src]="imagePreview">
+          </ion-item>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <button ion-button block (tap)="showCamera()">Cámara </button>
+              </ion-col>
+              <ion-col>
+                <button ion-button block (tap)="showGalery()">Galería</button>
+              </ion-col>
+            </ion-row>
+          
+          </ion-grid>
+  <button ion-button block (tap)="agregarPlatillo()">Agregar</button>
+  <button ion-button  full color="light" (tap)="home()">Cancelar</button>
+
+  </ion-list>
+  
+
+</ion-content>
